@@ -28,7 +28,7 @@ std::vector<std::filesystem::path> file_paths;
 void print_file_size(std::filesystem::path const& file_path)
 {
     // RAII solution: Use your lock guard
-    // The destructor of the lock guard (which calls unlock) is garunteed to be called once this scope is exited
+    // The destructor of the lock guard (which calls unlock) is guaranteed to be called once this scope is exited
     // This includes even if an exception is thrown
     lock_guard guard{file_system_lock};
 
@@ -63,7 +63,7 @@ void boot(void*)
     for (std::size_t i = 0; i < file_paths.size(); ++i)
     {
         // "reinterpret_cast" can also be used instead of "std::bit_cast"
-        // The latter is prefered since it checks that the size of the to and from type are the same at compile time
+        // The latter is preferred since it checks that the size of the to and from type are the same at compile time
         thread{worker, std::bit_cast<void*>(i)};
     }
 }

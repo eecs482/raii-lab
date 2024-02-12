@@ -57,7 +57,7 @@ void boot(void*)
     for (std::size_t i = 0; i < file_paths.size(); ++i)
     {
         // "reinterpret_cast" can also be used instead of "std::bit_cast"
-        // The latter is prefered since it checks that the size of the to and from type are the same at compile time
+        // The latter is preferred since it checks that the size of the to and from type are the same at compile time
         thread{worker, std::bit_cast<void*>(i)};
     }
 }

@@ -51,7 +51,7 @@ int main(int, char*[])
     //    What happens to transaction2? What happens to transaction3? Print the value of ".get()" to confirm your answer.
 
     // 6. Create two more transactions transaction4 and transaction5 managed by unique pointers.
-    //    Can you make trasaction4 complete before transaction5?
+    //    Can you make transaction4 complete before transaction5?
     //    Why does the standard method of creating two in a row NOT work? Think about destructor order.
     //    Hint: Curly brackets can be used to create scopes with a well-defined lifetime.
 }

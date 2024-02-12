@@ -45,7 +45,7 @@ int main(int, char*[])
     //     Started transaction with recipient 2 and amount 1000000
     //     Completed transaction with recipient 2 and amount 1000000
     // This means the unique pointer must have called delete of its managed object in its destructor.
-    // Delete would then call the descructor of the managed object, which in our case prints the completion message.
+    // Delete would then call the destructor of the managed object, which in our case prints the completion message.
 
     // 3. Note the default initialized unique pointer to a Transaction object below.
     //    Print the value of ".get()" on transaction2 and transaction3 (this is the raw underlying pointer).
@@ -85,7 +85,7 @@ int main(int, char*[])
     // Note that all std::move does is cast the unique pointer to an rvalue reference, which is then used to call the move constructor.
 
     // 6. Create two more transactions transaction4 and transaction5 managed by unique pointers.
-    //    Can you make trasaction4 complete before transaction5?
+    //    Can you make transaction4 complete before transaction5?
     //    Why does the standard method of creating two in a row NOT work? Think about destructor order.
     //    Hint: Curly brackets can be used to create scopes with a well-defined lifetime.
 

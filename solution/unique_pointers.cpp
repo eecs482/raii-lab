@@ -56,6 +56,8 @@ int main(int, char*[])
     std::cout << "transaction2.get(): " << transaction2.get() << std::endl;
     std::cout << "transaction3.get(): " << transaction3.get() << std::endl;
 
+    // Note: unique_ptr also can be directly printed: https://en.cppreference.com/w/cpp/memory/unique_ptr/operator_ltlt
+
     // We observe that transaction3 is in an empty state, as its underlying pointer is null.
     // transaction2 is in a valid state, as its underlying pointer is non-null.
 
